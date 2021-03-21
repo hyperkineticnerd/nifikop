@@ -2,7 +2,7 @@
 ##
 image:
   repository: quay.io/hyperkineticnerd/nifikop
-  tag: v0.5.3-master
+  tag: v0.5.3-snelson
   pullPolicy: Always
   imagePullSecrets:
     enabled: false
