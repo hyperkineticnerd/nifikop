@@ -1,8 +1,8 @@
 ## NiFi Operator Image
 ##
 image:
-  repository: orangeopensource/nifikop
-  tag: v0.5.3-release
+  repository: quay.io/hyperkineticnerd/nifikop
+  tag: v0.5.3-master
   pullPolicy: Always
   imagePullSecrets:
     enabled: false

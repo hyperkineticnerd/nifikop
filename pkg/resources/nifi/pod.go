@@ -110,7 +110,7 @@ func (r *Reconciler) pod(id int32, nodeConfig *v1alpha1.NodeConfig, pvcs []corev
 	pod := &corev1.Pod{
 		//ObjectMeta: templates.ObjectMetaWithAnnotations(
 		ObjectMeta: templates.ObjectMetaWithGeneratedNameAndAnnotations(
-			nifiutil.ComputeNodeName(id, r.NifiCluster.Name),
+			nifiutil.ComputeNodeName(id, r.NifiCluster.Name)+"-",
 			util.MergeLabels(
 				LabelsForNifi(r.NifiCluster.Name),
 				map[string]string{"nodeId": fmt.Sprintf("%d", id)},

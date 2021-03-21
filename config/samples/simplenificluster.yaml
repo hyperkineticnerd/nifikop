@@ -1,11 +1,11 @@
 apiVersion: nifi.orange.com/v1alpha1
 kind: NifiCluster
 metadata:
-  name: simplenifi
+  name: simple-nifi
 spec:
   service:
     headlessEnabled: true
-  zkAddress: "zookeeper.dlice:2181"
+  zkAddress: "zookeeper.nifi.svc.cluster.local:2181"
   zkPath: "/simplenifi"
   clusterImage: "apache/nifi:1.12.1"
   oneNifiNodePerNode: false
@@ -18,7 +18,7 @@ spec:
           pvcSpec:
             accessModes:
               - ReadWriteOnce
-            storageClassName: "standard"
+            storageClassName: "ovirt-csi-sc"
             resources:
               requests:
                 storage: 10Gi

@@ -1,6 +1,6 @@
 # Image URL to use all building/pushing image targets
 SERVICE_NAME			:= nifikop
-DOCKER_REGISTRY_BASE 	?= orangeopensource
+DOCKER_REGISTRY_BASE 	?= quay.io/hyperkineticnerd
 IMAGE_TAG				?= $(shell git describe --tags --abbrev=0 --match '[0-9].*[0-9].*[0-9]' 2>/dev/null)
 IMAGE_NAME 				?= $(SERVICE_NAME)
 
